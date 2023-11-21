@@ -542,22 +542,59 @@ CODE!</p>
 </section>
 <section id="why-publish-code" class="slide level2">
 <h2>Why publish code?</h2>
-<ul>
-<li><p>make your work reproducible</p></li>
-<li><p>adapt project oriented workflow</p></li>
-</ul>
+<div class="fragment">
+<div class="r-fit-text">
+<p>make your work<br>
+<strong>reproducible</strong></p>
+</div>
+</div>
+</section>
+<section id="defining-reproducibility" class="slide level2">
+<h2>Defining Reproducibility</h2>
 <div class="center-x">
-<p><img data-src="img/set_on_fire.png"></p>
+<p><img data-src="img/crcss.png" width="500"></p>
 </div>
-<div class="text04">
-<p>credit to <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Jenny Bryan</a></p>
+<blockquote>
+<p><em>A result is reproducible when the <strong>same</strong> analysis steps performed on the <strong>same</strong> dataset consistently produce the <strong>same</strong> answer</em></p>
+</blockquote>
+<div class="fragment">
+<blockquote>
+<p>A result is <strong>externally verified computational reproducible</strong> when the same analysis steps performed on the same dataset by <strong>external researchers</strong> consistently produce the same answer.</p>
+</blockquote>
 </div>
-<ul>
-<li><p>use <a href="https://the-turing-way.netlify.app/reproducible-research/compendia">research compendia</a></p></li>
-<li><p><a href="https://raps-with-r.dev/">book</a> on reproducibility in R</p></li>
-</ul>
+</section>
+<section id="how-do-i-make-my-analysis-reproducible" class="slide level2">
+<h2>How do I make my analysis reproducible?</h2>
+<p><br></p>
+<ol type="1">
+<li><p>Publish Code! 📢</p></li>
+<li><p>adapt project oriented workflow 📁</p></li>
+<li><p>use <span class="cran-pkg"><a href="https://cran.r-project.org/package=renv">renv</a><i class="fa-brands fa-r-project fa-2xs"></i></span> to “freeze” packages 🥶</p></li>
+<li><p>consider <span class="cran-pkg"><a href="https://cran.r-project.org/package=targets">targets</a><i class="fa-brands fa-r-project fa-2xs"></i></span> pipeline 🎯</p></li>
+<li><p>use <a href="https://raps-with-r.dev/repro_cont.html">docker</a> 🐋 (automate it with <span class="cran-pkg"><a href="https://cran.r-project.org/package=rang">rang</a><i class="fa-brands fa-r-project fa-2xs"></i></span>)</p></li>
+</ol>
+<p><br></p>
+<div class="fragment">
+<p><em>It is tough to go all the way, but 1. - 3. puts you ahead of most people with minimal effort</em></p>
+</div>
 </section>
 <section id="section-2" class="slide level2">
+<h2></h2>
+<div class="center-x">
+<p><img data-src="img/set_on_fire.png" width="900"></p>
+</div>
+<div class="text05">
+<p>credit to <a href="https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">Jenny Bryan</a></p>
+</div>
+</section>
+<section id="resources" class="slide level2">
+<h2>Resources</h2>
+<ul>
+<li><p><a href="https://raps-with-r.dev/">Book</a> on reproducibility in R</p></li>
+<li><p><a href="https://github.com/jobreu/reproducible-research-gesis-2023">Workflows for Reproducible Research with R &amp; Git</a> (Course at GESIS)</p></li>
+</ul>
+</section>
+<section id="section-3" class="slide level2">
 <h2></h2>
 <div class="r-fit-text">
 <p>CITE<br>
@@ -593,7 +630,7 @@ A BibTeX entry for LaTeX users is
 </div>
 <p>or use <span class="cran-pkg"><a href="https://cran.r-project.org/package=grateful">grateful</a><i class="fa-brands fa-r-project fa-2xs"></i></span></p>
 </section>
-<section id="resources" class="slide level2">
+<section id="resources-1" class="slide level2">
 <h2>Resources</h2>
 <p><br></p>
 <ul>
@@ -682,7 +719,7 @@ Hadley Wickham/Jenny Brian</p>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">create_package</span>(<span class="st">"path/to/mypkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
+<section id="section-4" class="slide level2">
 <h2></h2>
 <div class="center-x">
 <p><img data-src="img/automagic.jpg"></p>
@@ -712,14 +749,14 @@ Hadley Wickham/Jenny Brian</p>
 <li><p><a href="https://github.com/r-universe-org/help">Help for r-universe</a></p></li>
 </ul>
 </section>
-<section id="section-4" class="slide level2">
+<section id="section-5" class="slide level2">
 <h2></h2>
 <div class="r-fit-text">
 <p>An R package is<br>
 never done</p>
 </div>
 </section>
-<section id="section-5" class="slide level2">
+<section id="section-6" class="slide level2">
 <h2></h2>
 <div class="center-x">
 <p><img data-src="img/mad_scientist.webp" width="600"></p>
@@ -728,7 +765,7 @@ never done</p>
 <p>Created with DALL E</p>
 </div>
 </section>
-<section id="section-6" class="slide level2">
+<section id="section-7" class="slide level2">
 <h2></h2>
 <div class="center-x">
 <p><img data-src="img/bored_dev.webp" width="600"></p>
@@ -760,7 +797,7 @@ never done</p>
 <p><img data-src="img/collapse.jpg" height="600"></p>
 </div>
 </section>
-<section id="section-7" class="slide level2">
+<section id="section-8" class="slide level2">
 <h2></h2>
 <div class="center-x">
 <p><img data-src="img/open-source-developers.jpg" width="800"></p>
