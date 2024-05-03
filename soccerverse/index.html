@@ -1,0 +1,2634 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>soccerverse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<link href=".//static/img/favicon.ico" rel="icon">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="soccerverse">
+<meta property="og:description" content="Ranking football clubs across the world">
+<meta property="og:image" content="http://soccerverse.com/static/img/logo.png">
+<meta property="og:site_name" content="soccerverse">
+<meta property="og:image:alt" content="logo">
+<meta property="og:image:height" content="3000">
+<meta property="og:image:width" content="3000">
+<meta name="twitter:title" content="soccerverse">
+<meta name="twitter:description" content="Ranking football clubs across the world">
+<meta name="twitter:image" content="http://soccerverse.com/static/img/logo.png">
+<meta name="twitter:image:alt" content="logo">
+<meta name="twitter:site" content="@schochastics">
+<meta name="twitter:image-height" content="3000">
+<meta name="twitter:image-width" content="3000">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./static/img/logo.png" alt="soccerverse logo" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">soccerverse</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-rankings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Rankings</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-rankings">    
+        <li>
+    <a class="dropdown-item" href="./rankings/elo_men/index.html">
+ <span class="dropdown-text">FIFA Team Ranking (men)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./rankings/elo_women/index.html">
+ <span class="dropdown-text">UEFA Team Ranking (women)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./rankings/manager_men/index.html">
+ <span class="dropdown-text">Manager Ranking (men)</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./rankings/penalties_men/index.html">
+ <span class="dropdown-text">Penalty Rankings (men)</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./predictions/index.html"> 
+<span class="menu-text">Predictions</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./stats_centre/index.html"> 
+<span class="menu-text">Stats Centre</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+
+
+
+<div id="hero-banner" class="column-screen">
+<div class="cell g-col-lg-6 g-col-12 g-col-md-12">
+<div class="cell-output-display">
+<div id="gallery-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="0" aria-label="Slide 1" class="active" aria-current="true"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<button type="button" data-bs-target="#gallery-carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+</div>
+<div class="carousel-inner">
+<div class="carousel-item active" data-bs-interval="5000">
+<a href="rankings/elo_men/">
+<img src="static/img/soccerverse-banner.jpg" class="d-block  mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block white">
+<a href="rankings/elo_men/">
+<h3 class="fw-light anchored">World Team Ranking (Men)</h3>
+</a>
+<p class="fw-light">Ranking of more than 2000 top tier clubs in 107 countries</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="rankings/elo_women/">
+<img src="static/img/soccerverse-banner1.jpg" class="d-block  mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block white">
+<a href="rankings/elo_women/">
+<h3 class="fw-light anchored">European Team Ranking (Women)</h3>
+</a>
+<p class="fw-light">Ranking of all top tier clubs in all European countries</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="rankings/manager_men/">
+<img src="static/img/soccerverse-banner3.jpg" class="d-block  mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block white">
+<a href="rankings/manager_men/">
+<h3 class="fw-light anchored">Manager ranking</h3>
+</a>
+<p class="fw-light">Ranking of soccer managers based on the world team ranking</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="stats_centre/">
+<img src="static/img/soccerverse-banner2.jpg" class="d-block  mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block white">
+<a href="stats_centre/">
+<h3 class="fw-light anchored">Stats Centre</h3>
+</a>
+<p class="fw-light">Stats about rankings and more than 1 million matches</p>
+</div>
+</div>
+<div class="carousel-item" data-bs-interval="5000">
+<a href="predictions/">
+<img src="static/img/soccerverse-banner5.jpg" class="d-block  mx-auto">
+</a>
+<div class="carousel-caption d-none d-md-block white">
+<a href="predictions/">
+<h3 class="fw-light anchored">Predictions</h3>
+</a>
+<p class="fw-light">Match forecasting and end of season predictions for all top tier European leagues</p>
+</div>
+</div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#gallery-carousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#gallery-carousel" data-bs-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="visually-hidden">Next</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="grid column-screen-inset">
+<section id="men-world-team-ranking-top-10" class="level1 g-col-md-6 g-col-12">
+<h1>Men World Team Ranking (Top 10)</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div id="top10" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#top10 table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#top10 thead, #top10 tbody, #top10 tfoot, #top10 tr, #top10 td, #top10 th {
+  border-style: none;
+}
+
+#top10 p {
+  margin: 0;
+  padding: 0;
+}
+
+#top10 .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#top10 .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#top10 .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#top10 .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#top10 .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#top10 .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#top10 .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#top10 .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#top10 .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#top10 .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#top10 .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#top10 .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#top10 .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#top10 .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#top10 .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#top10 .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#top10 .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#top10 .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#top10 .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#top10 .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#top10 .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#top10 .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#top10 .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#top10 .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#top10 .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#top10 .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#top10 .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#top10 .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#top10 .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#top10 .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#top10 .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#top10 .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#top10 .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#top10 .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#top10 .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#top10 .gt_left {
+  text-align: left;
+}
+
+#top10 .gt_center {
+  text-align: center;
+}
+
+#top10 .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#top10 .gt_font_normal {
+  font-weight: normal;
+}
+
+#top10 .gt_font_bold {
+  font-weight: bold;
+}
+
+#top10 .gt_font_italic {
+  font-style: italic;
+}
+
+#top10 .gt_super {
+  font-size: 65%;
+}
+
+#top10 .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#top10 .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#top10 .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#top10 .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#top10 .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#top10 .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#top10 .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#top10 .gt_table {
+  background-color: #383A3F !important;
+  color: white;
+  width: 100%;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  font-size: 1rem;
+}
+
+#top10 .gt_row {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#top10 th {
+  color: #F68657 !important;
+  background-color: #383A3F !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #F68657 !important;
+}
+
+#top10 .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 0px !important;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #D3D3D3;
+}
+
+#top10 .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #383A3F !important;
+  border-left-style: none;
+  border-left-width: 0px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 0px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #F68657 !important;
+}
+
+#top10 a {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+
+#top10 .rank-down {
+  text-align: right;
+  display: block;
+  width: 100%;
+  background-color: #FD8D90;
+  border-radius: 5px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  color: #383A3F;
+}
+
+#top10 .rank-up {
+  text-align: right;
+  display: block;
+  width: 100%;
+  background-color: #94D6A8;
+  border-radius: 5px;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  color: #383A3F;
+}
+
+#top10 td:nth-child(6) {
+  text-align: right;
+  color: #737578;
+}
+
+#top10 td:nth-child(1) {
+  text-align: right;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Rank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Rank</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+<th id="Country" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Country</th>
+<th id="Points" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Points</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">1</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/manchester-city-football-club-england.html">Manchester City</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">2121</td>
+<td class="gt_row gt_right" headers="Diff">(+4)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">2</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/real-madrid-club-de-futbol-spain.html">Real Madrid</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Spain.png" title="Spain" class="img-fluid" data-,height="10" width="16"> Spain</td>
+<td class="gt_row gt_right" headers="Points">2089</td>
+<td class="gt_row gt_right" headers="Diff">(+3)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">3</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/fc-bayern-munchen-germany.html">Bayern Muenchen</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Germany.png" title="Germany" class="img-fluid" data-,height="10" width="16"> Germany</td>
+<td class="gt_row gt_right" headers="Points">2007</td>
+<td class="gt_row gt_right" headers="Diff">(+3)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">4</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/fc-internazionale-milano-italy.html">Inter</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Italy.png" title="Italy" class="img-fluid" data-,height="10" width="16"> Italy</td>
+<td class="gt_row gt_right" headers="Points">1927</td>
+<td class="gt_row gt_right" headers="Diff">(+4)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">5</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-up">+1</span></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/futbol-club-barcelona-spain.html">FC Barcelona</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Spain.png" title="Spain" class="img-fluid" data-,height="10" width="16"> Spain</td>
+<td class="gt_row gt_right" headers="Points">1887</td>
+<td class="gt_row gt_right" headers="Diff">(+4)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">6</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-down">-1</span></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/liverpool-fc-england.html">Liverpool FC</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">1873</td>
+<td class="gt_row gt_right" headers="Diff">(-21)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">7</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/paris-saint-germain-fc-france.html">Paris Saint Germain</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/France.png" title="France" class="img-fluid" data-,height="10" width="16"> France</td>
+<td class="gt_row gt_right" headers="Points">1873</td>
+<td class="gt_row gt_right" headers="Diff">(-6)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">8</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/arsenal-fc-england.html">Arsenal FC</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">1870</td>
+<td class="gt_row gt_right" headers="Diff">(+7)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">9</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/bv-borussia-09-dortmund-germany.html">Borussia Dortmund</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Germany.png" title="Germany" class="img-fluid" data-,height="10" width="16"> Germany</td>
+<td class="gt_row gt_right" headers="Points">1844</td>
+<td class="gt_row gt_right" headers="Diff">(-11)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">10</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-up">+1</span></td>
+<td class="gt_row gt_left" headers="Team"><a href="rankings/club_history/club-atletico-de-madrid-spain.html">Atletico Madrid</a></td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Spain.png" title="Spain" class="img-fluid" data-,height="10" width="16"> Spain</td>
+<td class="gt_row gt_right" headers="Points">1841</td>
+<td class="gt_row gt_right" headers="Diff">(+6)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><a href="./rankings/elo_men/index.html" class="show-full">Show full ranking</a></p>
+</section>
+<section id="women-european-team-ranking-top-10" class="level1 g-col-md-6 g-col-12">
+<h1>Women European Team Ranking (Top 10)</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div id="wtop10" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wtop10 table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#wtop10 thead, #wtop10 tbody, #wtop10 tfoot, #wtop10 tr, #wtop10 td, #wtop10 th {
+  border-style: none;
+}
+
+#wtop10 p {
+  margin: 0;
+  padding: 0;
+}
+
+#wtop10 .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#wtop10 .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#wtop10 .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#wtop10 .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#wtop10 .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wtop10 .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtop10 .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#wtop10 .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#wtop10 .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#wtop10 .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#wtop10 .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#wtop10 .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#wtop10 .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#wtop10 .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#wtop10 .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#wtop10 .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#wtop10 .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#wtop10 .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wtop10 .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtop10 .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#wtop10 .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#wtop10 .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#wtop10 .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtop10 .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#wtop10 .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#wtop10 .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtop10 .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtop10 .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#wtop10 .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtop10 .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#wtop10 .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtop10 .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wtop10 .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtop10 .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#wtop10 .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#wtop10 .gt_left {
+  text-align: left;
+}
+
+#wtop10 .gt_center {
+  text-align: center;
+}
+
+#wtop10 .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#wtop10 .gt_font_normal {
+  font-weight: normal;
+}
+
+#wtop10 .gt_font_bold {
+  font-weight: bold;
+}
+
+#wtop10 .gt_font_italic {
+  font-style: italic;
+}
+
+#wtop10 .gt_super {
+  font-size: 65%;
+}
+
+#wtop10 .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#wtop10 .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#wtop10 .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#wtop10 .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#wtop10 .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#wtop10 .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#wtop10 .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#wtop10 .gt_table {
+  background-color: #383A3F !important;
+  color: white;
+  width: 100%;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  font-size: 1rem;
+}
+
+#wtop10 .gt_row {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#wtop10 th {
+  color: #F68657 !important;
+  background-color: #383A3F !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+  padding-top: 0.25rem !important;
+  padding-bottom: 0.25rem !important;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #F68657 !important;
+}
+
+#wtop10 .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 0px !important;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #D3D3D3;
+}
+
+#wtop10 .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #383A3F !important;
+  border-left-style: none;
+  border-left-width: 0px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 0px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 1px !important;
+  border-bottom-color: #F68657 !important;
+}
+
+#wtop10 a {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+}
+
+#wtop10 .rank-down {
+  text-align: right;
+  display: block;
+  width: 100%;
+  background-color: #FD8D90;
+  border-radius: 5px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  color: #383A3F;
+}
+
+#wtop10 .rank-up {
+  text-align: right;
+  display: block;
+  width: 100%;
+  background-color: #94D6A8;
+  border-radius: 5px;
+  padding-left: 0.15em;
+  padding-right: 0.15em;
+  color: #383A3F;
+}
+
+#wtop10 td:nth-child(6) {
+  text-align: right;
+  color: #737578;
+}
+
+#wtop10 td:nth-child(1) {
+  text-align: right;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Rank" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Rank</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+<th id="Team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+<th id="Country" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Country</th>
+<th id="Points" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Points</th>
+<th class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col"></th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">1</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-up">+1</span></td>
+<td class="gt_row gt_left" headers="Team">FC Barcelona</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Spain.png" title="Spain" class="img-fluid" data-,height="10" width="16"> Spain</td>
+<td class="gt_row gt_right" headers="Points">2184</td>
+<td class="gt_row gt_right" headers="Diff">(+27)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">2</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-down">-1</span></td>
+<td class="gt_row gt_left" headers="Team">Olympique Lyonnais Feminin</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/France.png" title="France" class="img-fluid" data-,height="10" width="16"> France</td>
+<td class="gt_row gt_right" headers="Points">2177</td>
+<td class="gt_row gt_right" headers="Diff">(+18)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">3</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">Chelsea LFC</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">2090</td>
+<td class="gt_row gt_right" headers="Diff">(-26)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">4</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">FC Bayern Munchen</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Germany.png" title="Germany" class="img-fluid" data-,height="10" width="16"> Germany</td>
+<td class="gt_row gt_right" headers="Points">2045</td>
+<td class="gt_row gt_right" headers="Diff"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">5</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">Paris Saint Germain FC</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/France.png" title="France" class="img-fluid" data-,height="10" width="16"> France</td>
+<td class="gt_row gt_right" headers="Points">1984</td>
+<td class="gt_row gt_right" headers="Diff">(-24)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">6</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">VFL Wolfsburg</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Germany.png" title="Germany" class="img-fluid" data-,height="10" width="16"> Germany</td>
+<td class="gt_row gt_right" headers="Points">1969</td>
+<td class="gt_row gt_right" headers="Diff"></td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">7</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">Manchester City LFC</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">1934</td>
+<td class="gt_row gt_right" headers="Diff">(+1)</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">8</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">Arsenal WFC</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/England.png" title="England" class="img-fluid" data-,height="10" width="16"> England</td>
+<td class="gt_row gt_right" headers="Points">1919</td>
+<td class="gt_row gt_right" headers="Diff">(-12)</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Rank">9</td>
+<td class="gt_row gt_right" headers="Move"></td>
+<td class="gt_row gt_left" headers="Team">Ssd Roma</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Italy.png" title="Italy" class="img-fluid" data-,height="10" width="16"> Italy</td>
+<td class="gt_row gt_right" headers="Points">1876</td>
+<td class="gt_row gt_right" headers="Diff"></td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="Rank">10</td>
+<td class="gt_row gt_right" headers="Move"><span class="rank-up">+1</span></td>
+<td class="gt_row gt_left" headers="Team">Hacken</td>
+<td class="gt_row gt_left" headers="Country"><img src="static/img/flags/Sweden.png" title="Sweden" class="img-fluid" data-,height="10" width="16"> Sweden</td>
+<td class="gt_row gt_right" headers="Points">1847</td>
+<td class="gt_row gt_right" headers="Diff">(+8)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><a href="./rankings/elo_women/index.html" class="show-full">Show full ranking</a></p>
+</section>
+</div>
+<section id="history-of-selected-clubs" class="level2">
+<h2 class="anchored" data-anchor-id="history-of-selected-clubs">History of selected Clubs</h2>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="305" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 304;"><span id="cb1-305"><a href="#cb1-305" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {addTooltips} <span class="im">from</span> <span class="st">"@mkfreeman/plot-tooltip"</span></span>
+<span id="cb1-306"><a href="#cb1-306" aria-hidden="true" tabindex="-1"></a>selected_elo <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/selected_elo_hist_men.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> } )<span class="op">;</span></span>
+<span id="cb1-307"><a href="#cb1-307" aria-hidden="true" tabindex="-1"></a><span class="fu">addTooltips</span>(</span>
+<span id="cb1-308"><a href="#cb1-308" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb1-309"><a href="#cb1-309" aria-hidden="true" tabindex="-1"></a>  <span class="dt">color</span><span class="op">:</span> {</span>
+<span id="cb1-310"><a href="#cb1-310" aria-hidden="true" tabindex="-1"></a>    <span class="dt">legend</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb1-311"><a href="#cb1-311" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-312"><a href="#cb1-312" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb1-313"><a href="#cb1-313" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb1-314"><a href="#cb1-314" aria-hidden="true" tabindex="-1"></a>    <span class="co">//domain: d3.extent(selected_elo,d =&gt; d.avg_goals),</span></span>
+<span id="cb1-315"><a href="#cb1-315" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span><span class="st">"↑ Elo"</span><span class="op">,</span></span>
+<span id="cb1-316"><a href="#cb1-316" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ticks</span><span class="op">:</span> <span class="dv">6</span></span>
+<span id="cb1-317"><a href="#cb1-317" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-318"><a href="#cb1-318" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb1-319"><a href="#cb1-319" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb1-320"><a href="#cb1-320" aria-hidden="true" tabindex="-1"></a>    <span class="co">//domain: d3.extent(goal_data_ojs,d =&gt; d.year),</span></span>
+<span id="cb1-321"><a href="#cb1-321" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span><span class="st">"Year"</span><span class="op">,</span></span>
+<span id="cb1-322"><a href="#cb1-322" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ticks</span><span class="op">:</span> <span class="dv">6</span></span>
+<span id="cb1-323"><a href="#cb1-323" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-324"><a href="#cb1-324" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb1-325"><a href="#cb1-325" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Plot.gridY({ticks:5, stroke: "#fff", strokeOpacity: 0.2}),</span></span>
+<span id="cb1-326"><a href="#cb1-326" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(selected_elo<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"elo"</span><span class="op">,</span> <span class="dt">z</span><span class="op">:</span> <span class="st">"display_name"</span><span class="op">,</span> <span class="dt">stroke</span><span class="op">:</span> <span class="st">"display_name"</span><span class="op">,</span> <span class="dt">title</span><span class="op">:</span> <span class="st">"display_name"</span></span>
+<span id="cb1-327"><a href="#cb1-327" aria-hidden="true" tabindex="-1"></a>    })</span>
+<span id="cb1-328"><a href="#cb1-328" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Plot.text(selected_elo, Plot.selectLast({x: "date", y: "elo", z: "display_name", text: "display_name", textAnchor: "start", dx: 3}))</span></span>
+<span id="cb1-329"><a href="#cb1-329" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb1-330"><a href="#cb1-330" aria-hidden="true" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb1-331"><a href="#cb1-331" aria-hidden="true" tabindex="-1"></a>    <span class="dt">background</span><span class="op">:</span> <span class="st">"#383A3F"</span><span class="op">,</span></span>
+<span id="cb1-332"><a href="#cb1-332" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"#D3D3D3"</span><span class="op">,</span></span>
+<span id="cb1-333"><a href="#cb1-333" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Poppins"</span><span class="op">,</span></span>
+<span id="cb1-334"><a href="#cb1-334" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
+<span id="cb1-335"><a href="#cb1-335" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb1-336"><a href="#cb1-336" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb1-337"><a href="#cb1-337" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">950</span><span class="op">,</span></span>
+<span id="cb1-338"><a href="#cb1-338" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb1-339"><a href="#cb1-339" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb1-340"><a href="#cb1-340" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb1-341"><a href="#cb1-341" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb1-342"><a href="#cb1-342" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-343"><a href="#cb1-343" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetBottom</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-344"><a href="#cb1-344" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetLeft</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-345"><a href="#cb1-345" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetRight</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb1-346"><a href="#cb1-346" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-347"><a href="#cb1-347" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="club-of-the-week" class="level2">
+<h2 class="anchored" data-anchor-id="club-of-the-week">Club of the week</h2>
+<section id="caps-united-zimbabwe" class="level3">
+<h3 class="anchored" data-anchor-id="caps-united-zimbabwe">Caps United (Zimbabwe)</h3>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="361" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 360;"><span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>cow_elo <span class="op">=</span> <span class="cf">await</span> <span class="fu">FileAttachment</span>(<span class="st">"data/cow_elo_hist_men.csv"</span>)<span class="op">.</span><span class="fu">csv</span>({ <span class="dt">typed</span><span class="op">:</span> <span class="kw">true</span> } )<span class="op">;</span></span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>Plot<span class="op">.</span><span class="fu">plot</span>({</span>
+<span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>  <span class="dt">y</span><span class="op">:</span> {</span>
+<span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a>    <span class="co">//domain: d3.extent(selected_elo,d =&gt; d.avg_goals),</span></span>
+<span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span><span class="st">"↑ Elo"</span><span class="op">,</span></span>
+<span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ticks</span><span class="op">:</span> <span class="dv">6</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>  <span class="dt">x</span><span class="op">:</span> {</span>
+<span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a>    <span class="dt">grid</span><span class="op">:</span> <span class="kw">false</span><span class="op">,</span></span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a>    <span class="co">//domain: d3.extent(goal_data_ojs,d =&gt; d.year),</span></span>
+<span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>    <span class="dt">label</span><span class="op">:</span><span class="st">"Year"</span><span class="op">,</span></span>
+<span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a>    <span class="dt">ticks</span><span class="op">:</span> <span class="dv">6</span></span>
+<span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marks</span><span class="op">:</span> [</span>
+<span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Plot.gridY({ticks:5, stroke: "#fff", strokeOpacity: 0.2}),</span></span>
+<span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>    Plot<span class="op">.</span><span class="fu">line</span>(cow_elo<span class="op">,</span> {<span class="dt">x</span><span class="op">:</span> <span class="st">"date"</span><span class="op">,</span> <span class="dt">y</span><span class="op">:</span> <span class="st">"elo"</span>})</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Plot.text(selected_elo, Plot.selectLast({x: "date", y: "elo", z: "display_name", text: "display_name", textAnchor: "start", dx: 3}))</span></span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
+<span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> {</span>
+<span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a>    <span class="dt">background</span><span class="op">:</span> <span class="st">"#383A3F"</span><span class="op">,</span></span>
+<span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fill</span><span class="op">:</span> <span class="st">"#D3D3D3"</span><span class="op">,</span></span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontFamily</span><span class="op">:</span> <span class="st">"Poppins"</span><span class="op">,</span></span>
+<span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>    <span class="dt">fontSize</span><span class="op">:</span> <span class="st">"16px"</span></span>
+<span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a>  <span class="dt">height</span><span class="op">:</span> <span class="dv">600</span><span class="op">,</span></span>
+<span id="cb2-387"><a href="#cb2-387" aria-hidden="true" tabindex="-1"></a>  <span class="dt">width</span><span class="op">:</span> <span class="dv">950</span><span class="op">,</span></span>
+<span id="cb2-388"><a href="#cb2-388" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginLeft</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-389"><a href="#cb2-389" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginRight</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-390"><a href="#cb2-390" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginTop</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a>  <span class="dt">marginBottom</span><span class="op">:</span> <span class="dv">50</span><span class="op">,</span></span>
+<span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetBottom</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetLeft</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>  <span class="dt">insetRight</span><span class="op">:</span> <span class="dv">0</span></span>
+<span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="expression">
+
+</div>
+</div>
+</div>
+</div>
+<p>(click on a team in the full world team ranking to view its Elo history)</p>
+</section>
+</section>
+<section id="undefeated-streaks" class="level2">
+<h2 class="anchored" data-anchor-id="undefeated-streaks">Undefeated streaks</h2>
+<p>Currently longest ongoing undefeated streaks (all games excluding national cups)</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="streak" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#streak table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#streak thead, #streak tbody, #streak tfoot, #streak tr, #streak td, #streak th {
+  border-style: none;
+}
+
+#streak p {
+  margin: 0;
+  padding: 0;
+}
+
+#streak .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: 100%;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#streak .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#streak .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#streak .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#streak .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#streak .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#streak .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #FFFFFF;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#streak .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#streak .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#streak .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#streak .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#streak .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#streak .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#streak .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#streak .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#streak .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#streak .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#streak .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#streak .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#streak .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#streak .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#streak .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#streak .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#streak .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#streak .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#streak .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#streak .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#streak .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#streak .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#streak .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#streak .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#streak .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#streak .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#streak .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#streak .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#streak .gt_left {
+  text-align: left;
+}
+
+#streak .gt_center {
+  text-align: center;
+}
+
+#streak .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#streak .gt_font_normal {
+  font-weight: normal;
+}
+
+#streak .gt_font_bold {
+  font-weight: bold;
+}
+
+#streak .gt_font_italic {
+  font-style: italic;
+}
+
+#streak .gt_super {
+  font-size: 65%;
+}
+
+#streak .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#streak .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#streak .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#streak .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#streak .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#streak .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#streak .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#streak table, #streak th {
+  background-color: #383A3F !important;
+}
+
+#streak th {
+  color: white !important;
+}
+
+#streak td {
+  color: white !important;
+}
+</style>
+
+<table class="gt_table table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+<th id="Country" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Country</th>
+<th id="undefeated" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">undefeated</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Team" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Etoile Matoury</td>
+<td class="gt_row gt_left" headers="Country" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">French Guyana</td>
+<td class="gt_row gt_right" headers="undefeated" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">45</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Team" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Bayer Leverkusen</td>
+<td class="gt_row gt_left" headers="Country" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Germany</td>
+<td class="gt_row gt_right" headers="undefeated" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">41</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Team" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Real Madrid</td>
+<td class="gt_row gt_left" headers="Country" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Spain</td>
+<td class="gt_row gt_right" headers="undefeated" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">36</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Team" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">The New Saints</td>
+<td class="gt_row gt_left" headers="Country" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Wales</td>
+<td class="gt_row gt_right" headers="undefeated" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">32</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Team" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Arkadag</td>
+<td class="gt_row gt_left" headers="Country" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">Turkmenistan</td>
+<td class="gt_row gt_right" headers="undefeated" style="border-bottom-width: 2px; border-bottom-style: solid; border-bottom-color: white; font-size: 16px">31</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="news" class="level2">
+<h2 class="anchored" data-anchor-id="news">News</h2>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">(04/2024)</h3>
+<ul>
+<li>added currently longest streaks</li>
+</ul>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">(03/2024)</h3>
+<ul>
+<li>added penalty rankings</li>
+</ul>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">(09/2023)</h3>
+<ul>
+<li>adjusted some internal parameters and recalculated rankings</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7YWRkVG9vbHRpcHN9IGZyb20gXCJAbWtmcmVlbWFuL3Bsb3QtdG9vbHRpcFwiXG5zZWxlY3RlZF9lbG8gPSBhd2FpdCBGaWxlQXR0YWNobWVudChcImRhdGEvc2VsZWN0ZWRfZWxvX2hpc3RfbWVuLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9ICk7XG5hZGRUb29sdGlwcyhcblBsb3QucGxvdCh7XG4gIGNvbG9yOiB7XG4gICAgbGVnZW5kOiB0cnVlXG4gIH0sXG4gIHk6IHtcbiAgICBncmlkOiBmYWxzZSxcbiAgICAvL2RvbWFpbjogZDMuZXh0ZW50KHNlbGVjdGVkX2VsbyxkID0+IGQuYXZnX2dvYWxzKSxcbiAgICBsYWJlbDpcIuKGkSBFbG9cIixcbiAgICB0aWNrczogNlxuICB9LFxuICB4OiB7XG4gICAgZ3JpZDogZmFsc2UsXG4gICAgLy9kb21haW46IGQzLmV4dGVudChnb2FsX2RhdGFfb2pzLGQgPT4gZC55ZWFyKSxcbiAgICBsYWJlbDpcIlllYXJcIixcbiAgICB0aWNrczogNlxuICB9LFxuICBtYXJrczogW1xuICAgIC8vUGxvdC5ncmlkWSh7dGlja3M6NSwgc3Ryb2tlOiBcIiNmZmZcIiwgc3Ryb2tlT3BhY2l0eTogMC4yfSksXG4gICAgUGxvdC5saW5lKHNlbGVjdGVkX2Vsbywge3g6IFwiZGF0ZVwiLCB5OiBcImVsb1wiLCB6OiBcImRpc3BsYXlfbmFtZVwiLCBzdHJva2U6IFwiZGlzcGxheV9uYW1lXCIsIHRpdGxlOiBcImRpc3BsYXlfbmFtZVwiXG4gICAgfSlcbiAgICAvL1Bsb3QudGV4dChzZWxlY3RlZF9lbG8sIFBsb3Quc2VsZWN0TGFzdCh7eDogXCJkYXRlXCIsIHk6IFwiZWxvXCIsIHo6IFwiZGlzcGxheV9uYW1lXCIsIHRleHQ6IFwiZGlzcGxheV9uYW1lXCIsIHRleHRBbmNob3I6IFwic3RhcnRcIiwgZHg6IDN9KSlcbiAgXSxcbiAgc3R5bGU6IHtcbiAgICBiYWNrZ3JvdW5kOiBcIiMzODNBM0ZcIixcbiAgICBmaWxsOiBcIiNEM0QzRDNcIixcbiAgICBmb250RmFtaWx5OiBcIlBvcHBpbnNcIixcbiAgICBmb250U2l6ZTogXCIxNnB4XCJcbiAgfSxcbiAgaGVpZ2h0OiA2MDAsXG4gIHdpZHRoOiA5NTAsXG4gIG1hcmdpbkxlZnQ6IDUwLFxuICBtYXJnaW5SaWdodDogNTAsXG4gIG1hcmdpblRvcDogNTAsXG4gIG1hcmdpbkJvdHRvbTogNTAsXG4gIGluc2V0VG9wOiAwLFxuICBpbnNldEJvdHRvbTogMCxcbiAgaW5zZXRMZWZ0OiAwLFxuICBpbnNldFJpZ2h0OiAwXG59KVxuKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiY293X2VsbyA9IGF3YWl0IEZpbGVBdHRhY2htZW50KFwiZGF0YS9jb3dfZWxvX2hpc3RfbWVuLmNzdlwiKS5jc3YoeyB0eXBlZDogdHJ1ZSB9ICk7XG5QbG90LnBsb3Qoe1xuICB5OiB7XG4gICAgZ3JpZDogZmFsc2UsXG4gICAgLy9kb21haW46IGQzLmV4dGVudChzZWxlY3RlZF9lbG8sZCA9PiBkLmF2Z19nb2FscyksXG4gICAgbGFiZWw6XCLihpEgRWxvXCIsXG4gICAgdGlja3M6IDZcbiAgfSxcbiAgeDoge1xuICAgIGdyaWQ6IGZhbHNlLFxuICAgIC8vZG9tYWluOiBkMy5leHRlbnQoZ29hbF9kYXRhX29qcyxkID0+IGQueWVhciksXG4gICAgbGFiZWw6XCJZZWFyXCIsXG4gICAgdGlja3M6IDZcbiAgfSxcbiAgbWFya3M6IFtcbiAgICAvL1Bsb3QuZ3JpZFkoe3RpY2tzOjUsIHN0cm9rZTogXCIjZmZmXCIsIHN0cm9rZU9wYWNpdHk6IDAuMn0pLFxuICAgIFBsb3QubGluZShjb3dfZWxvLCB7eDogXCJkYXRlXCIsIHk6IFwiZWxvXCJ9KVxuICAgIC8vUGxvdC50ZXh0KHNlbGVjdGVkX2VsbywgUGxvdC5zZWxlY3RMYXN0KHt4OiBcImRhdGVcIiwgeTogXCJlbG9cIiwgejogXCJkaXNwbGF5X25hbWVcIiwgdGV4dDogXCJkaXNwbGF5X25hbWVcIiwgdGV4dEFuY2hvcjogXCJzdGFydFwiLCBkeDogM30pKVxuICBdLFxuICBzdHlsZToge1xuICAgIGJhY2tncm91bmQ6IFwiIzM4M0EzRlwiLFxuICAgIGZpbGw6IFwiI0QzRDNEM1wiLFxuICAgIGZvbnRGYW1pbHk6IFwiUG9wcGluc1wiLFxuICAgIGZvbnRTaXplOiBcIjE2cHhcIlxuICB9LFxuICBoZWlnaHQ6IDYwMCxcbiAgd2lkdGg6IDk1MCxcbiAgbWFyZ2luTGVmdDogNTAsXG4gIG1hcmdpblJpZ2h0OiA1MCxcbiAgbWFyZ2luVG9wOiA1MCxcbiAgbWFyZ2luQm90dG9tOiA1MCxcbiAgaW5zZXRUb3A6IDAsXG4gIGluc2V0Qm90dG9tOiAwLFxuICBpbnNldExlZnQ6IDAsXG4gIGluc2V0UmlnaHQ6IDBcbn0pXG5cbiJ9XX0=
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="./about.html">
+<p>About</p>
+</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ © Copyright 2016 - 2023 soccerverse
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

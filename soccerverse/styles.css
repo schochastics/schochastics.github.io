@@ -1,0 +1,143 @@
+:root {
+    --soccerverse-bg: #383A3F;
+    --soccerverse-fg: #F6B352;
+    --soccerverse-hl: #F68657;
+}
+/* css styles */
+h1,h2,h3,h4{
+    font-family: 'Teko';
+    color: var(--soccerverse-fg);
+}
+
+div.carousel-caption > h3{
+    color: var(--soccerverse-hl); 
+}
+
+div.carousel-caption > a{
+    text-decoration: none!important;
+}
+
+/* navbar */
+.navbar a{
+    font-family: 'Teko';
+    font-weight: 700;
+}
+
+/* navbar dropdown */
+.dropdown-menu {
+    background-color: var(--soccerverse-bg);
+}
+
+.dropdown-menu > li a{
+    color: var(--soccerverse-fg);
+}
+
+.dropdown-menu > li a:hover{
+    color: var(--soccerverse-hl);
+    background-color: var(--soccerverse-bg);
+}
+
+.quarto-title-banner h1{
+    background-image: none!important ;
+}
+
+.white{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.show-full{
+    display: block;
+    text-align: center;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--soccerverse-fg);
+    text-decoration: none;
+    color: var(--soccerverse-fg);
+}
+
+.show-full:hover{
+    background-color: var(--soccerverse-fg);
+    color: white;
+}
+
+.tab-content {
+	margin-top: 0px;
+	border-left: #dee2e6 0px solid;
+	border-right: #dee2e6 0px solid;
+	border-bottom: #dee2e6 0px solid;
+	margin-left: 0;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.nav-tabs{
+    border-bottom: white 2px solid!important;   
+    border-left: white 0px solid!important; 
+    border-right: white 0px solid!important; 
+    border-top: white 0px solid!important; 
+}
+
+.panel-tabset .nav-link:hover{
+    border-top: #F6B352 2px solid!important;   
+    border-bottom: #383A3F 1px solid!important; 
+    border-left: #383A3F 1px solid!important; 
+    border-right: #383A3F 1px solid!important; 
+}
+
+.panel-tabset .nav-link.active{
+    border-top: #F6B352 2px solid!important; 
+    border-left: white 0px solid!important; 
+    border-right: white 0px solid!important; 
+    border-bottom: white 0px solid!important; 
+    color: white!important;
+}
+
+#TOC .nav-link.active{
+    color: var(--soccerverse-fg)!important;
+}
+
+#TOC .nav-link:hover{
+    color: var(--soccerverse-fg)!important;
+}
+
+#hero-banner {
+  background-color: black; 
+}
+
+@media screen and (max-width: 768px) {
+    #hero-banner {
+        display: none;
+    }
+}
+
+#quarto-content main { 
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.carousel.card {
+  padding-top: 2em;
+}
+.carousel img {
+  width: 100%;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F6B352' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    filter: none!important;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F6B352' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    filter: none!important;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  margin-bottom: 110px;
+}
+
+.has-title:hover {
+    stroke: white!important;
+}

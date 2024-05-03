@@ -1,0 +1,63 @@
+div.datatables{
+    background-color: var(--soccerverse-bg)!important;
+    color: white;
+}
+
+table.dataTable thead th{
+    color: var(--soccerverse-hl);
+    border-bottom: 2px solid var(--soccerverse-hl);
+    background-color: var(--soccerverse-bg)!important;
+}
+
+table.dataTable td{
+    color: white;
+    border-bottom: 1px solid white;
+    background-color: var(--soccerverse-bg)!important;
+}
+
+.dataTables_info,.dataTables_length,.dataTables_filter{
+    color: white!important;
+}
+
+#rankdt .paginate_button{
+    color: white!important;
+}
+
+.paginate_button.current{
+    color: white!important;
+    background-color: var(--soccerverse-fg)!important;
+}
+
+div.dtfc-left-top-blocker, div.dtfc-right-top-blocker{
+    background-color: var(--soccerverse-bg)!important;
+}
+
+.rank-down {
+    text-align: right;
+    display: block;
+    width: 100%;
+    background-color: #FD8D90;
+    border-radius: 5px;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    color: #383A3F;
+}
+.rank-up {
+    text-align: right;
+    display: block;
+    width: 100%;
+    background-color: #94D6A8;
+    border-radius: 5px;
+    padding-left: 0.15em;
+    padding-right: 0.15em;
+    color: #383A3F;
+}
+
+.point-diff{
+    color: #737578;
+}
+
+.team-style{
+    text-decoration: none;
+    font-weight: 700;
+}

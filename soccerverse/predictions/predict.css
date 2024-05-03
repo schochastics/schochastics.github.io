@@ -1,0 +1,37 @@
+div.datatables{
+    background-color: var(--soccerverse-bg)!important;
+    color: white;
+}
+
+table.dataTable thead th{
+    color: var(--soccerverse-hl);
+    border-bottom: 2px solid var(--soccerverse-hl);
+    background-color: var(--soccerverse-bg)!important;
+}
+
+table.dataTable td{
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+td:nth-child(1){
+    background-color: var(--soccerverse-bg)!important;
+}
+
+
+.dataTables_info,.dataTables_length,.dataTables_filter{
+    color: white!important;
+}
+
+#rankdt .paginate_button{
+    color: white!important;
+}
+
+.paginate_button.current{
+    color: white!important;
+    background-color: var(--soccerverse-fg)!important;
+}
+
+div.dtfc-left-top-blocker, div.dtfc-right-top-blocker{
+    background-color: var(--soccerverse-bg)!important;
+}
