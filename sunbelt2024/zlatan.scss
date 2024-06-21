@@ -1,0 +1,60 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+// fonts
+$font-family-sans-serif: 'Josefin Sans', sans-serif !default;
+$font-family-monospace: 'IBM Plex Mono', sans-serif !default;
+
+// headings
+$presentation-heading-font: "Acme", sans-serif !default;
+$presentation-heading-color: #EDE5A6 !default;
+$presentation-font-size-root: 36px;
+
+// colors
+$body-bg: #23395B !default;
+$body-color: #EDE5A6 !default;
+$link-color: #EDE5A6 !default;
+
+$sec-color: #a7d6f5;
+
+/*-- scss:rules --*/
+.slide-logo {
+    display: block !important;
+    position: fixed !important;
+    top: 3% !important;
+    left: 97% !important;
+    max-height: 10% !important;
+    height: 3.5% !important;
+    width: auto !important;
+    color: $body-color !important;
+}
+
+.slide-number,
+.reveal.has-logo .slide-number {
+    bottom: 10px !important;
+    right: 10px !important;
+    top: unset !important;
+    color: $body-color !important;
+}
+
+.center-x {
+    text-align: center;
+}
+
+.center-xy {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.big {
+    font-size: 3.5rem;
+}
+
+.small {
+    font-size: 1.5rem;
+}
