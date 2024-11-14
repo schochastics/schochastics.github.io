@@ -102,3 +102,13 @@ $presentation-font-size-root: 36px;
     margin-bottom: 1em;
     max-width: 100%;
 }
+
+.outline {
+    font-family: "ACME";
+    color: #fff;
+    text-shadow:
+        4px 4px 0 #000,
+        -4px 4px 0 #000,
+        -4px -4px 0 #000,
+        4px -4px 0 #000;
+}
